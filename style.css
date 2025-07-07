@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+body {
+  font-family: 'Yusei Magic', 'Kosugi Maru', 'Yu Gothic', 'Meiryo', sans-serif;
+  background: #f7f6e7;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #e08a1e;
+  margin-top: 32px;
+}
+
+#tanzaku-form {
+  margin: 24px auto;
+}
+
+#tanzaku-area {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.tanzaku {
+  width: 120px;
+  height: 320px;
+  background: linear-gradient(180deg, #ffe066 80%, #fffbe6 100%);
+  border: 2px solid #e08a1e;
+  border-radius: 8px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+  padding: 0px 8px 32px 8px;
+  font-size: 1.2em;
+  color: #333;
+  word-break: break-all;
+  writing-mode: vertical-rl;
+  text-align: center;
+  transition: height 0.3s;
+  display: block;
+  overflow: hidden;
+}
+
+.tanzaku span {
+  display: inline-block;
+  font-family: 'Yusei Magic', 'Kosugi Maru', 'Yu Gothic', 'Meiryo', sans-serif;
+  pointer-events: none;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.tanzaku::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #e08a1e;
+  border-radius: 50%;
+}
+
+#back-btn {
+  margin-top: 24px;
+  padding: 12px 24px;
+  background: #e08a1e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#back-btn:hover {
+  background: #c77719;
+}
+
+#main-tweet-btn {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#main-tweet-btn:hover {
+  background: #1991db;
+}
+
+/* レインボーアニメーション */
+@keyframes rainbow-glow {
+  0% { filter: drop-shadow(0 0 4px #ff0000) hue-rotate(0deg); color: #ff0000; }
+  16% { filter: drop-shadow(0 0 4px #ff9900) hue-rotate(60deg); color: #ff9900; }
+  33% { filter: drop-shadow(0 0 4px #ffee00) hue-rotate(120deg); color: #ffee00; }
+  50% { filter: drop-shadow(0 0 4px #33ff00) hue-rotate(180deg); color: #33ff00; }
+  66% { filter: drop-shadow(0 0 4px #00aaff) hue-rotate(240deg); color: #00aaff; }
+  83% { filter: drop-shadow(0 0 4px #9900ff) hue-rotate(300deg); color: #9900ff; }
+  100% { filter: drop-shadow(0 0 4px #ff0000) hue-rotate(360deg); color: #ff0000; }
+}
+.rainbow-glow {
+  animation: rainbow-glow 1.2s linear infinite;
+  font-weight: bold;
+}

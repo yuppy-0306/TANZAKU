@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>短冊メーカー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 入力画面 -->
+  <div id="input-screen">
+    <h1>短冊メーカー</h1>
+    <form id="tanzaku-form">
+      <label for="wish">願い事を書いてください：</label><br>
+      <input type="text" id="wish" name="wish" maxlength="40" required><br>
+      <label for="name">名前（任意）：</label><br>
+      <input type="text" id="name" name="name" maxlength="20" placeholder="お名前"><br>
+      <button type="submit">短冊を作る</button>
+    </form>
+  </div>
+
+  <!-- 短冊表示画面 -->
+  <div id="tanzaku-screen" style="display: none;">
+    <h1>あなたの短冊</h1>
+    <div id="tanzaku-area"></div>
+    <button id="back-btn">新しい短冊を作る</button><br>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
