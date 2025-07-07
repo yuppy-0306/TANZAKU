@@ -114,3 +114,34 @@ h1 {
   animation: rainbow-glow 1.2s linear infinite;
   font-weight: bold;
 }
+
+/* レスポンシブ対応 - スマホ画面での文字位置調整 */
+@media screen and (max-width: 768px) {
+  .tanzaku {
+    margin: 0 auto;
+  }
+  
+  /* スマホでの文字位置調整 */
+  .tanzaku span[style*="position: absolute"] {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  /* 1つ目の文字列 */
+  .tanzaku span:nth-of-type(1) {
+    left: 25% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  /* 2つ目の文字列 */
+  .tanzaku span:nth-of-type(2) {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  /* 3つ目の文字列 */
+  .tanzaku span:nth-of-type(3) {
+    left: 75% !important;
+    transform: translateX(-50%) !important;
+  }
+}
